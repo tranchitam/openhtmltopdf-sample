@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+group 'io.github.tranchitam'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "com.openhtmltopdf:openhtmltopdf-core:$openhtmltopdfVersion"
+    implementation "net.sourceforge.htmlcleaner:htmlcleaner:$htmlcleanerVersion"
+    implementation "com.openhtmltopdf:openhtmltopdf-slf4j:$openhtmltopdfVersion"
+    implementation "com.openhtmltopdf:openhtmltopdf-pdfbox:$openhtmltopdfVersion"
+    implementation "com.openhtmltopdf:openhtmltopdf-java2d:$openhtmltopdfVersion"
+    implementation "com.openhtmltopdf:openhtmltopdf-rtl-support:$openhtmltopdfVersion"
+
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+}
+
+test {
+    useJUnitPlatform()
+}
